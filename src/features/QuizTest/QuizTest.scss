@@ -1,0 +1,118 @@
+@import '/src/App.scss';
+
+.quiztest {
+    padding: 2rem;
+    background-color: $bg-white;
+    border-radius: 1rem;
+    box-shadow: $box-shadow;
+    margin-top: 1rem;
+    border: 1px solid $border-quiztest;
+    overflow-x: hidden;
+
+    &-text {
+        margin-bottom: 1.5rem;
+        @include text-style(1.125rem, 500, 1.75rem, $text-color);
+        display: flex;
+        align-items: baseline;
+
+        .item {
+            display: flex;
+            align-items: center;
+        }
+
+        .whitespace-nowrap {
+            white-space: nowrap;
+        }
+    }
+
+    &-draggable {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        white-space: nowrap;
+        flex-wrap: wrap;
+    }
+    &-actions {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    
+        @media (max-width: 768px) {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+    &-blankspace {
+        display: inline-block;
+        @include size(6rem, 2rem);
+        background-color: $bg-blankspace;
+        @include text-style(1.125rem, 600, 1.75rem, $black-space-color);
+        border-bottom: 2px solid $border-blackspace;
+        margin: 0.25rem;
+        border-radius: 0.375rem;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: $box-shadow-blankspace;
+        transition: all 0.2s ease;
+    
+        &.filled {
+            background-color: $black-space-filled;
+        }
+    
+        &:hover {
+            background-color: $black-space-hover;
+            color: $bg-white;
+        }
+    
+        @media (max-width: 768px) {
+            @include size(3rem, 1.75rem);
+            
+        }
+        @media (max-width: 480px) {
+            @include size(2rem, 1.5rem);
+           
+        }
+    }
+    
+
+    @media (max-width: 1200px) {
+        padding: 1.5rem;
+
+        &-text {
+            font-size: 1rem;
+        }
+
+       
+    }
+
+    @media (max-width: 768px) {
+        padding: 1rem;
+
+        &-text{
+            @include text-style(0.875rem, 500, 1.5rem, $text-color);
+        }
+
+        &-draggable {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        
+    }
+
+    @media (max-width: 480px) {
+        padding: 0.75rem;
+
+        &-text {
+            @include text-style(0.60rem, 500, 1.25rem, $text-color);
+        }
+
+        &-draggable {
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        
+    }
+}
+
+

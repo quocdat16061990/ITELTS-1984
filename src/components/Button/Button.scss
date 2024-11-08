@@ -1,0 +1,68 @@
+@import '/src/App.scss';
+
+.btn {
+  width: 100%;
+  padding: 1rem;
+  @include text-style(1rem, bold, 1.5, $text-black);
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+  outline: none;
+  border: none;
+
+  &:hover {
+    transform: scale(0.98);
+  }
+
+  &-reset {
+    background-color: $color-reset;
+    color: $bg-white;
+    margin-top: 1rem;
+    @include text-style(1rem, bold, 1.5, $bg-white);
+
+    &:hover {
+      background-color: $color-reset-hover;
+    }
+
+   
+
+    @media (max-width: 639px) {
+      @include text-style(0.875rem, bold, 1.5, $bg-white);
+    }
+  }
+
+  &-success {
+    background-color: $color-primary;
+    color: $bg-white;
+    @include text-style(1rem, bold, 1.5, $bg-white);
+
+    &:hover {
+      background-color: $color-primary-hover;
+    }
+    &:disabled {
+      background-color: $color-disabled;
+      color: $color-disabled-text;
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+    @media (max-width: 639px) {
+      @include text-style(0.875rem, bold, 1.5, $bg-white);
+    }
+  }
+
+  @media (min-width: 640px) {
+    @include text-style(1rem, bold, 1.5, $text-black);
+    padding: 1.25rem;
+  }
+
+  @media (max-width: 639px) {
+    @include text-style(0.875rem, bold, 1.5, $text-black);
+    padding: 0.75rem;
+  }
+
+  @media (max-width: 480px) {
+    @include text-style(0.875rem, bold, 1.5, $text-black);
+    padding: 0.5rem;
+  }
+}

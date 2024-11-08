@@ -1,0 +1,48 @@
+.paragraph-word {
+    padding: 0.5rem 1rem;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    
+    &:hover {
+      background-color: #007bff;
+      color: white;
+    }
+    
+    &.red-color {
+      color: red;
+    }
+  
+    &.black-color {
+      color: black;
+    }
+  
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    @media (max-width: 1200px) {
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 992px) {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+        margin-right: 8px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.6rem;
+        margin-right: 5px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
+        margin-right: 4px;
+    }
+}
